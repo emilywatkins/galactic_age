@@ -13,8 +13,12 @@ describe('Age', function() {
     let today = new Date(2018, 2, 16);
     let yesterdaySeconds = yesterday.getTime() / 1000;
     let todaySeconds = today.getTime() / 1000;
-    expect(age.difference(yesterday, today)).toEqual(86400)
+    expect(age.difference(yesterday, today)).toEqual(86400);
+  });
 
-  })
+  it('should return the age in Mercury years', function() {
+    let age = new Age;
+    expect(age.mercury(2)).toEqual(.48);
+  });
 
 })

@@ -14,4 +14,7 @@ export class Age {
     return difference;
   }
 
+  mercury(dob) {
+    
+  }
 }
