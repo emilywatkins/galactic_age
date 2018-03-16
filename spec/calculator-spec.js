@@ -61,6 +61,7 @@ describe('Calculator', function() {
     let dob = new Date(2017, 2, 16);
     let lifeExpectancy = 20;
     let calculator = new Calculator(dob, lifeExpectancy);
-
+    let earthAge = calculator.galacticYears('earth');
+    expect(calculator.yearsLeft('earth')).toEqual(lifeExpectancy - earthAge);
   })
 })

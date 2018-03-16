@@ -41,6 +41,8 @@ export class Calculator {
       return marsYears;
     } else if (planet === 'jupiter') {
       return jupiterYears;
+    } else if (planet === 'earth') {
+      return earthYears;
     }
   }
 
