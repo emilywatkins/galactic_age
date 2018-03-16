@@ -8,11 +8,12 @@ describe('Age', function() {
   });
 
   it('should return the difference between 2 dates in seconds', function() {
+    let age = new Age;
     let yesterday = new Date(2018, 2, 15);
     let today = new Date(2018, 2, 16);
     let yesterdaySeconds = yesterday.getTime() / 1000;
     let todaySeconds = today.getTime() / 1000;
-    expect(difference(yesterday, today)).toEqual(86400)
+    expect(age.difference(yesterday, today)).toEqual(86400)
 
   })
 

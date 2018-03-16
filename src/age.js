@@ -5,8 +5,13 @@ export class Age {
     return seconds;
   }
 
-  difference(dob, now) {
-    
+  difference(startDate, endDate) {
+    let start = new Date(startDate);
+    let startSeconds = start.getTime() / 1000;
+    let end = new Date(endDate);
+    let endSeconds = end.getTime() / 1000;
+    let difference = endSeconds - startSeconds;
+    return difference;
   }
 
 }
