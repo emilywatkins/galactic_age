@@ -35,6 +35,8 @@ export class Age {
   }
 
   mars(dob) {
-
+    let ageInSeconds = this.currentAge(dob);
+    let marsYears = (ageInSeconds/(365*24*60*60))/1.88;
+    return marsYears;
   }
 }
