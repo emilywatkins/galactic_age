@@ -15,7 +15,11 @@ export class Age {
   }
 
   currentAge(dob) {
-    
+    let start = new Date(dob);
+    let startSeconds = start.getTime()/1000;
+    let end = Date.now()/1000;
+    let ageInSeconds = end - startSeconds;
+    return ageInSeconds;
   }
 
   mercury(dob) {

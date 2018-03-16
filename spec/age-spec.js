@@ -25,7 +25,7 @@ describe('Age', function() {
     let age = new Age;
     let dob = new Date(2018, 2, 15);
     let dobSeconds = dob.getTime()/1000;
-    let now = Date.now();
+    let now = Date.now()/1000;
     expect(age.currentAge(dob)).toEqual(now - dobSeconds);
   });
 
