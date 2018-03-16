@@ -5,4 +5,8 @@ export class Age {
     return seconds;
   }
 
+  difference(dob, now) {
+    
+  }
+
 }
