@@ -23,7 +23,12 @@ export class Age {
   }
 
   galacticYears(dob, planet) {
-    
+    let ageInSeconds = this.currentAge(dob);
+    let earthYears = ageInSeconds/(365*24*60*60);
+    let mercuryYears = earthYears/.24;
+    if (planet === 'mercury') {
+      return mercuryYears;
+    }
   }
 
   mercury(dob) {
