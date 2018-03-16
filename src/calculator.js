@@ -46,4 +46,10 @@ export class Calculator {
     }
   }
 
+  yearsLeft(planet) {
+    if (planet === 'earth') {
+      return (this.lifeExpectancy - this.galacticYears('earth'))
+    }
+  }
+
 }
