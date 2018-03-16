@@ -53,15 +53,40 @@ export class Calculator {
     let jupiterExpectancy = this.lifeExpectancy/11.86;
 
     if (planet === 'earth') {
-      return (this.lifeExpectancy - this.galacticYears('earth'))
+      let earthRemaining = (this.lifeExpectancy - this.galacticYears('earth'));
+      if (earthRemaining > 0) {
+        return earthRemaining;
+      } else {
+        return Math.abs(earthRemaining);
+      }
     } else if (planet === 'venus') {
-      return (venusExpectancy - this.galacticYears('venus'))
+      let venusRemaining = (venusExpectancy - this.galacticYears('venus'));
+      if (venusRemaining > 0) {
+        return venusRemaining;
+      } else {
+        return Math.abs(venusRemaining);
+      }
     } else if (planet === 'mercury') {
-      return (mercuryExpectancy - this.galacticYears('mercury'))
+      let mercuryRemaining = (mercuryExpectancy - this.galacticYears('mercury'));
+      if (mercuryRemaining > 0) {
+        return mercuryRemaining;
+      } else {
+        return Math.abs(mercuryRemaining);
+      }
     } else if (planet === 'mars') {
-      return (marsExpectancy - this.galacticYears('mars'))
+      let marsRemaining = (marsExpectancy - this.galacticYears('mars'));
+      if (marsRemaining > 0) {
+        return marsRemaining;
+      } else {
+        return Math.abs(marsRemaining);
+      }
     } else if (planet === 'jupiter') {
-      return (jupiterExpectancy - this.galacticYears('jupiter'))
+      let jupiterRemaining = (jupiterExpectancy - this.galacticYears('jupiter'));
+      if (jupiterRemaining > 0) {
+        return jupiterRemaining;
+      } else {
+        return Math.abs(jupiterRemaining);
+      }
     }
   }
 
