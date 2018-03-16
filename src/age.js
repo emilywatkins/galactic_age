@@ -41,6 +41,8 @@ export class Age {
   }
 
   jupiter(dob) {
-    
+    let ageInSeconds = this.currentAge(dob);
+    let jupiterYears = (ageInSeconds/(365*24*60*60))/11.86;
+    return jupiterYears;
   }
 }
