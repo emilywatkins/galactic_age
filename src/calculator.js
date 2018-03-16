@@ -49,6 +49,14 @@ export class Calculator {
   yearsLeft(planet) {
     if (planet === 'earth') {
       return (this.lifeExpectancy - this.galacticYears('earth'))
+    } else if (planet === 'venus') {
+      return (this.lifeExpectancy - this.galacticYears('venus'))
+    } else if (planet === 'mercury') {
+      return (this.lifeExpectancy - this.galacticYears('mercury'))
+    } else if (planet === 'mars') {
+      return (this.lifeExpectancy - this.galacticYears('mars'))
+    } else if (planet === 'jupiter') {
+      return (this.lifeExpectancy - this.galacticYears('jupiter'))
     }
   }
 
