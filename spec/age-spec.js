@@ -21,7 +21,7 @@ describe('Age', function() {
     let dob = new Date(2018, 2, 15);
     let dobSeconds = dob.getTime()/1000;
     let now = Date.now()/1000;
-    expect(age.currentAge(dob)).toEqual(now - dobSeconds);
+    expect(Math.round(age.currentAge(dob))).toEqual(Math.round(now - dobSeconds));
   });
 
   it('should return the age in Mercury years', function() {
@@ -33,6 +33,12 @@ describe('Age', function() {
     expect(age.mercury(dob)).toEqual(mercuryYears);
   });
 
-
+  it('should return the age in Venus years', function() {
+    let age = new Age;
+    let dob = new Date(2017, 2, 16);
+    let ageInSeconds = age.currentAge(dob);
+    let venusYears = (ageInSeconds/(365*24*60*60))/.62;
+    expect(age.venus(dob)).toEqual(venusYears);
+  });
 
 })

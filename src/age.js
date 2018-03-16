@@ -25,6 +25,12 @@ export class Age {
   mercury(dob) {
     let ageInSeconds = this.currentAge(dob);
     let mercuryYears = (ageInSeconds/(365*24*60*60))/.24;
-    return mercuryYears
+    return mercuryYears;
+  }
+
+  venus(dob) {
+    let ageInSeconds = this.currentAge(dob);
+    let venusYears = (ageInSeconds/(365*24*60*60))/.62;
+    return venusYears;
   }
 }
