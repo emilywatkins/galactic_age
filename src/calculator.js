@@ -1,4 +1,8 @@
-export class Age {
+export class Calculator {
+  constructor(dob, lifeExpectancy) {
+    this.dob = dob;
+    this.lifeExpectancy = lifeExpectancy;
+  }
 
   seconds(year) {
     let seconds = year * 31557600;
@@ -14,16 +18,16 @@ export class Age {
     return difference;
   }
 
-  currentAge(dob) {
-    let start = new Date(dob);
+  currentAge() {
+    let start = new Date(this.dob);
     let startSeconds = Math.round(start.getTime()/1000);
     let end = Math.round(Date.now()/1000);
     let ageInSeconds = end - startSeconds;
     return ageInSeconds;
   }
 
-  galacticYears(dob, planet) {
-    let ageInSeconds = this.currentAge(dob);
+  galacticYears(planet) {
+    let ageInSeconds = this.currentAge(this.dob);
     let earthYears = ageInSeconds/(365*24*60*60);
     let mercuryYears = earthYears/.24;
     let venusYears = earthYears/.62;
