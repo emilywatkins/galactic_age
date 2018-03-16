@@ -21,4 +21,13 @@ describe('Age', function() {
     expect(age.mercury(2)).toEqual(.48);
   });
 
+  it('should return exact age in seconds', function() {
+    let age = new Age;
+    let dob = new Date(2018, 2, 15);
+    let dobSeconds = dob.getTime()/1000;
+    let now = Date.now();
+    expect(age.currentAge(dob)).toEqual(now - dobSeconds);
+  });
+
+
 })

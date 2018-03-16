@@ -14,7 +14,12 @@ export class Age {
     return difference;
   }
 
-  mercury(dob) {
+  currentAge(dob) {
     
+  }
+
+  mercury(dob) {
+    // let now = Date.now() / 1000;
+    // let ageInSeconds = Age.difference(now, dob)
   }
 }
