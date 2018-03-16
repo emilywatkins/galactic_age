@@ -80,6 +80,7 @@ describe('Calculator', function() {
     let calculator = new Calculator(dob, lifeExpectancy);
     let planetExpectancy = lifeExpectancy/.62;
     let venusAge = calculator.galacticYears('venus');
+    console.log(calculator.yearsLeft('venus'));
     expect(calculator.yearsLeft('venus')).toBeGreaterThan(0);
   });
 })
