@@ -29,7 +29,7 @@ describe('Age', function() {
     let dob = new Date(2017, 2, 16);
     let ageInSeconds = age.currentAge(dob);
     let earthYears = ageInSeconds/(365*24*60*60);
-    let mercuryYears = earthYears*.24;
+    let mercuryYears = earthYears/.24;
     expect(age.mercury(dob)).toEqual(mercuryYears);
   });
 

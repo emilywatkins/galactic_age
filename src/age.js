@@ -23,7 +23,8 @@ export class Age {
   }
 
   mercury(dob) {
-    // let now = Date.now() / 1000;
-    // let ageInSeconds = Age.difference(now, dob)
+    let ageInSeconds = this.currentAge(dob);
+    let mercuryYears = (ageInSeconds/(365*24*60*60))/.24;
+    return mercuryYears
   }
 }
