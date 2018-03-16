@@ -30,7 +30,7 @@ describe('Age', function() {
     let ageInSeconds = age.currentAge(dob);
     let earthYears = ageInSeconds/(365*24*60*60);
     let mercuryYears = earthYears/.24;
-    expect(age.mercury(dob)).toEqual(mercuryYears);
+    expect(age.galacticYears(dob, 'mercury')).toEqual(mercuryYears);
   });
 
   it('should return the age in Venus years', function() {
