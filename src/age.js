@@ -26,32 +26,18 @@ export class Age {
     let ageInSeconds = this.currentAge(dob);
     let earthYears = ageInSeconds/(365*24*60*60);
     let mercuryYears = earthYears/.24;
+    let venusYears = earthYears/.62;
+    let marsYears = earthYears/1.88;
+    let jupiterYears = earthYears/11.86;
     if (planet === 'mercury') {
       return mercuryYears;
+    } else if (planet === 'venus') {
+      return venusYears;
+    } else if (planet === 'mars') {
+      return marsYears;
+    } else if (planet === 'jupiter') {
+      return jupiterYears;
     }
   }
 
-  mercury(dob) {
-    let ageInSeconds = this.currentAge(dob);
-    let mercuryYears = (ageInSeconds/(365*24*60*60))/.24;
-    return mercuryYears;
-  }
-
-  venus(dob) {
-    let ageInSeconds = this.currentAge(dob);
-    let venusYears = (ageInSeconds/(365*24*60*60))/.62;
-    return venusYears;
-  }
-
-  mars(dob) {
-    let ageInSeconds = this.currentAge(dob);
-    let marsYears = (ageInSeconds/(365*24*60*60))/1.88;
-    return marsYears;
-  }
-
-  jupiter(dob) {
-    let ageInSeconds = this.currentAge(dob);
-    let jupiterYears = (ageInSeconds/(365*24*60*60))/11.86;
-    return jupiterYears;
-  }
 }

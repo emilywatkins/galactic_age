@@ -38,7 +38,7 @@ describe('Age', function() {
     let dob = new Date(2017, 2, 16);
     let ageInSeconds = age.currentAge(dob);
     let venusYears = (ageInSeconds/(365*24*60*60))/.62;
-    expect(age.venus(dob)).toEqual(venusYears);
+    expect(age.galacticYears(dob, 'venus')).toEqual(venusYears);
   });
 
   it('should return the age in Mars years', function() {
@@ -46,7 +46,7 @@ describe('Age', function() {
     let dob = new Date(2017, 2, 16);
     let ageInSeconds = age.currentAge(dob);
     let marsYears = (ageInSeconds/(365*24*60*60))/1.88;
-    expect(age.mars(dob)).toEqual(marsYears);
+    expect(age.galacticYears(dob, 'mars')).toEqual(marsYears);
   });
 
   it('should return the age in Jupiter years', function() {
@@ -54,6 +54,6 @@ describe('Age', function() {
     let dob = new Date(2017, 2, 16);
     let ageInSeconds = age.currentAge(dob);
     let jupiterYears = (ageInSeconds/(365*24*60*60))/11.86;
-    expect(age.jupiter(dob)).toEqual(jupiterYears);
+    expect(age.galacticYears(dob, 'jupiter')).toEqual(jupiterYears);
   });
 })
