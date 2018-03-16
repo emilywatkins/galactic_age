@@ -41,4 +41,12 @@ describe('Age', function() {
     expect(age.venus(dob)).toEqual(venusYears);
   });
 
+  it('should return the age in Mars years', function() {
+    let age = new Age;
+    let dob = new Date(2017, 2, 16);
+    let ageInSeconds = age.currentAge(dob);
+    let marsYears = (ageInSeconds/(365*24*60*60))/1.88;
+    expect(age.mars(dob)).toEqual(marsYears);
+  });
+
 })

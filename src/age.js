@@ -33,4 +33,8 @@ export class Age {
     let venusYears = (ageInSeconds/(365*24*60*60))/.62;
     return venusYears;
   }
+
+  mars(dob) {
+
+  }
 }
