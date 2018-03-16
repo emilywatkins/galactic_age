@@ -66,10 +66,21 @@ describe('Calculator', function() {
   });
 
   it('should return the remaining years on any planet per life expectancy', function() {
-    let dob = new Date(2017, 2, 16);
+    let dob = new Date(2012, 2, 16);
     let lifeExpectancy = 20;
     let calculator = new Calculator(dob, lifeExpectancy);
+    let planetExpectancy = lifeExpectancy/.62;
     let venusAge = calculator.galacticYears('venus');
-    expect(calculator.yearsLeft('venus')).toEqual(lifeExpectancy - venusAge);
+    expect(calculator.yearsLeft('venus')).toEqual(planetExpectancy - venusAge);
+  });
+
+  it('should return the number of years lived past expectancy', function() {
+    let dob = new Date(2000, 2, 16);
+    let lifeExpectancy = 5;
+    let calculator = new Calculator(dob, lifeExpectancy);
+    let planetExpectancy = lifeExpectancy/.62;
+    let venusAge = calculator.galacticYears('venus');
+    console.log(planetExpectancy - venusAge);
+    expect(calculator.yearsOver('venus')).toBeGreaterThan(0);
   });
 })

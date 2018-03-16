@@ -47,16 +47,21 @@ export class Calculator {
   }
 
   yearsLeft(planet) {
+    let venusExpectancy = this.lifeExpectancy/.62;
+    let mercuryExpectancy = this.lifeExpectancy/.24;
+    let marsExpectancy = this.lifeExpectancy/1.88;
+    let jupiterExpectancy = this.lifeExpectancy/11.86;
+
     if (planet === 'earth') {
       return (this.lifeExpectancy - this.galacticYears('earth'))
     } else if (planet === 'venus') {
-      return (this.lifeExpectancy - this.galacticYears('venus'))
+      return (venusExpectancy - this.galacticYears('venus'))
     } else if (planet === 'mercury') {
-      return (this.lifeExpectancy - this.galacticYears('mercury'))
+      return (mercuryExpectancy - this.galacticYears('mercury'))
     } else if (planet === 'mars') {
-      return (this.lifeExpectancy - this.galacticYears('mars'))
+      return (marsExpectancy - this.galacticYears('mars'))
     } else if (planet === 'jupiter') {
-      return (this.lifeExpectancy - this.galacticYears('jupiter'))
+      return (jupiterExpectancy - this.galacticYears('jupiter'))
     }
   }
 
