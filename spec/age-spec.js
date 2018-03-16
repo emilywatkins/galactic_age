@@ -16,11 +16,6 @@ describe('Age', function() {
     expect(age.difference(yesterday, today)).toEqual(86400);
   });
 
-  it('should return the age in Mercury years', function() {
-    let age = new Age;
-    expect(age.mercury(2)).toEqual(.48);
-  });
-
   it('should return exact age in seconds', function() {
     let age = new Age;
     let dob = new Date(2018, 2, 15);
@@ -28,6 +23,16 @@ describe('Age', function() {
     let now = Date.now()/1000;
     expect(age.currentAge(dob)).toEqual(now - dobSeconds);
   });
+
+  it('should return the age in Mercury years', function() {
+    let age = new Age;
+    let dob = new Date(2017, 2, 16);
+    let ageInSeconds = age.currentAge(dob);
+    let earthYears = ageInSeconds/(365*24*60*60);
+    let mercuryYears = earthYears*.24;
+    expect(age.mercury(dob)).toEqual(mercuryYears);
+  });
+
 
 
 })
