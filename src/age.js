@@ -39,4 +39,8 @@ export class Age {
     let marsYears = (ageInSeconds/(365*24*60*60))/1.88;
     return marsYears;
   }
+
+  jupiter(dob) {
+    
+  }
 }
